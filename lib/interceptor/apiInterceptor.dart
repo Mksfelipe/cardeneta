@@ -9,6 +9,7 @@ class ApiInterceptor extends InterceptorsWrapper {
     String? token = prefs.getString('token');
 
     options.headers['Authorization'] = 'Bearer $token';
+
     handler.next(options);
   }
 
